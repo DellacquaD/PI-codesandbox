@@ -1,0 +1,279 @@
+.home {
+    min-height: 100vh;
+    background: #DFE4EA;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+} 
+
+.searcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 139px;
+    width: 100vw;
+    background-color: #191B1D;
+    padding: 15px;
+    z-index: 2;
+    justify-content: space-around;
+}
+
+.searcher *::-webkit-scrollbar {
+    display: none;
+}
+
+.searcher p {
+    margin: 5px;
+    padding: 0;
+}   
+
+.searcher h1 {
+    color: #DFE4EA;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 0;
+}
+
+#calendar {
+    padding: 0px 10px;
+    align-items: center ;
+}
+
+.calendar div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+}
+
+.searcher button {
+    border-radius: 5px;
+    width: 15vw;
+    border: none;
+    background-color: rgb(240, 87, 45);
+    color: #DFE4EA;
+    font-weight: 600;
+}
+
+.searcher section {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    gap: 10px;
+    height: 30px;
+}
+
+.searcher section div {
+    display: flex;
+    background-color: #DFE4EA;
+    
+}
+
+.searcher section > div {
+    border-radius: 5px;
+    width: 30vw;
+
+}
+
+.searcher section div .picker {
+    width: 90%;
+}
+
+.searcher section div select {
+    width: 90%;
+    height: 80%;
+    background-color: #DFE4EA;
+    border: none;
+}
+
+.searcher section div img {
+    max-height: 70%;
+}
+
+
+/* LOCATION FORM*/
+
+a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.formClass {
+    width: 95%;
+    padding: 0;
+    margin: 0px 10px;
+}
+
+
+
+.selectbox {
+    display: flex;
+    background-color: #191B1D !important;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+#select {
+    height: 30px;
+    align-items: center;
+}
+
+.select-content {
+    background-color: #DFE4EA;
+    margin-left: 5px;
+    max-height: 30px;
+    width: 100%;
+}
+
+.select-content > p {
+    width: 100%;
+    font-size: 20px;
+    color: #191B1D;
+}
+
+#options {
+    max-height: 400px;
+    width: 100%;
+    overflow: auto;
+    display: none;
+    z-index: 5;
+}
+
+#options > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#options.active {
+    display: block;
+}
+
+.content-option {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+    border-bottom: 2px solid rgb(240, 87, 45);
+    transition: .2s ease all;
+    transform: scale(.92);
+}
+
+.content-option .texts {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.texts p {
+    height: 100%;
+    color:#191B1D;
+    font-size: 20px;
+}
+
+#btn-search:hover {
+    transform: scale(1.02);
+    opacity: 90%;
+}
+
+
+/* For mobile */
+
+@media (max-width: 370px) {
+    .searcher h1 {
+        font-size: 18px;
+    }
+
+    #options {
+        width: 75vw;
+        max-height: 250px;
+        position: absolute;
+        top: 250px;
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+    .searcher {
+        position: relative;
+        z-index: 0;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .searcher section {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60%;
+    }
+
+    .searcher section div {
+        width: 100%;
+    }
+
+    .searcher div button {
+        width: 90vw;
+        height: 5vh;
+    }
+
+    .location-container form {
+        width: 100%;
+    }
+
+    #select {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #select .select-content {
+        width: 95%;
+    }
+
+    #options {
+        width: 75vw;
+        max-height: 250px;
+        position: absolute;
+        top: 170px;
+    }
+    
+    .content-option {
+        flex-direction: row;
+    }
+    
+    #btn-search {
+        width: 100%;
+        height: 20%;
+    }
+
+}
+
+/* For tablet */
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    .searcher {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #select {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .select-content > p {
+        font-size: 16px;
+    }
+
+    .content-option {
+        flex-direction: row;
+    }
+
+}
